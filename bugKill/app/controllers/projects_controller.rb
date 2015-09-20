@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :update, :destroy]
 
+  headers['Access-Control-Allow-Origin'] = '*' 
+  headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+  headers['Access-Control-Max-Age'] = "1728000"
+
   # GET /projects
   # GET /projects.json
   def index
